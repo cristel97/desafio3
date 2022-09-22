@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const Contenedor = require('./index');
-const productos = new Contenedor ("./productos.txt");
+const productos = new Contenedor ("productos.txt");
 
 // Productos
 const producto1 = {
@@ -23,7 +23,7 @@ const producto3 = {
     thumbnail: "https://www.laroche-posay.es/effaclar/effaclar-ultra-concentrated-serum"
 }
 
-//ENVIO DE PRODUCTOS AL TXT
+
 const usarContenedor = async () => {
     await productos.save(producto1)
     await productos.save(producto2)
@@ -47,7 +47,7 @@ const getProductRandom = async () =>{
 
 
 app.get('/', (req, res) => {
-    res.send(`Root`);
+    res.send(`Hola!`);
 })
 
 app.get('/productos',async (req, res) => {
