@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const Contenedor = require('./index');
-const productos = new Contenedor ("productos.txt");
+const productos = new Contenedor ("./productos.txt");
 
 // Productos
 const producto1 = {
